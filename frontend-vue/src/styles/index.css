@@ -1,0 +1,233 @@
+/* ===== HoistGuard 全局样式 / 深色工业风 ===== */
+:root {
+  /* 主色：科技蓝/青 */
+  --hg-primary: #2f7dff;
+  --hg-primary-2: #22d3ee;
+  --hg-accent: #38bdf8;
+
+  /* 告警 */
+  --hg-danger: #ff4d4f;
+  --hg-warning: #faad14;
+  --hg-success: #52c41a;
+  --hg-info: #8c9bb5;
+
+  /* 背景层级（深色工业风） */
+  --hg-bg: #0b1220;
+  --hg-bg-soft: #111a2b;
+  --hg-panel: #16223a;
+  --hg-panel-2: #1b2940;
+  --hg-border: #243450;
+
+  /* 文本 */
+  --hg-text: #e6edf7;
+  --hg-text-2: #a4b1c7;
+  --hg-text-3: #6b7a93;
+
+  /* 工业直角风：去圆角 */
+  --hg-radius: 2px;
+  --hg-radius-sm: 2px;
+  --hg-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  --hg-shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.25);
+
+  /* 等宽字体（数据/编号/时间戳） */
+  --hg-mono: 'JetBrains Mono', 'Cascadia Code', 'Consolas', 'SFMono-Regular', monospace;
+
+  /* Element Plus 圆角统一收敛为直角 */
+  --el-border-radius-base: 2px;
+  --el-border-radius-small: 2px;
+  --el-border-radius-round: 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background: var(--hg-bg);
+  color: var(--hg-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b3b58;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 通用面板/卡片 */
+.hg-panel {
+  background: linear-gradient(180deg, var(--hg-panel) 0%, var(--hg-panel-2) 100%);
+  border: 1px solid var(--hg-border);
+  border-radius: var(--hg-radius);
+  box-shadow: var(--hg-shadow-sm);
+}
+
+.hg-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--hg-text);
+  margin: 0;
+}
+.hg-section-title::before {
+  content: '';
+  width: 4px;
+  height: 16px;
+  background: linear-gradient(180deg, var(--hg-primary), var(--hg-primary-2));
+}
+
+/* 让 Element Plus 暗色更贴合主题 */
+.el-card {
+  --el-card-bg-color: var(--hg-panel);
+}
+
+/* 全局直角化：表格/卡片/按钮/输入/标签 */
+.el-table {
+  border-radius: var(--hg-radius-sm);
+  overflow: hidden;
+}
+.el-button,
+.el-input__wrapper,
+.el-card,
+.el-tag,
+.el-select__wrapper,
+.el-pagination .el-pager li,
+.el-pagination button {
+  border-radius: 2px !important;
+}
+
+/* 渐隐进入动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.18s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* ===== 日间模式 ===== */
+html.light {
+  --hg-bg: #f0f4f8;
+  --hg-bg-soft: #e8edf3;
+  --hg-panel: #ffffff;
+  --hg-panel-2: #f5f8fb;
+  --hg-border: #d0d9e6;
+  --hg-text: #1a2535;
+  --hg-text-2: #4a5a72;
+  --hg-text-3: #8a9bb5;
+  --hg-sidebar-bg: linear-gradient(180deg, #1a2d4a 0%, #152440 100%);
+  --hg-topbar-bg: linear-gradient(90deg, #1e3356, #1a2e4e);
+  --el-color-primary: var(--hg-primary);
+  --el-bg-color: #ffffff;
+  --el-bg-color-overlay: #f5f8fb;
+  --el-bg-color-page: #f0f4f8;
+  --el-fill-color-blank: #ffffff;
+  --el-text-color-primary: #1a2535;
+  --el-text-color-regular: #4a5a72;
+  --el-text-color-secondary: #8a9bb5;
+  --el-border-color: #d0d9e6;
+  --el-border-color-light: #d0d9e6;
+  --el-border-color-lighter: #e2e8f0;
+  --el-border-color-darker: #bcc8d8;
+}
+
+html.light body {
+  background: var(--hg-bg);
+  color: var(--hg-text);
+}
+
+html.light .hg-panel {
+  background: linear-gradient(180deg, #ffffff 0%, #f7fafd 100%);
+  border-color: var(--hg-border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+html.light .el-table {
+  --el-table-bg-color: #ffffff;
+  --el-table-tr-bg-color: #ffffff;
+  --el-table-header-bg-color: #f0f4f8;
+  --el-table-row-hover-bg-color: rgba(47, 125, 255, 0.06);
+  --el-table-border-color: #d0d9e6;
+  --el-table-header-text-color: #1a2535;
+  --el-table-text-color: #4a5a72;
+}
+
+html.light .el-pagination.is-background .el-pager li {
+  background: #e8edf3;
+  color: #4a5a72;
+}
+html.light .el-pagination.is-background .el-pager li.is-active {
+  background: var(--hg-primary);
+  color: #fff;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #c0ccd8;
+}
+
+
+html.dark {
+  --el-color-primary: var(--hg-primary);
+  --el-bg-color: var(--hg-panel);
+  --el-bg-color-overlay: var(--hg-panel-2);
+  --el-bg-color-page: var(--hg-bg);
+  --el-fill-color-blank: var(--hg-panel);
+  --el-text-color-primary: var(--hg-text);
+  --el-text-color-regular: var(--hg-text-2);
+  --el-text-color-secondary: var(--hg-text-3);
+  --el-border-color: var(--hg-border);
+  --el-border-color-light: var(--hg-border);
+  --el-border-color-lighter: var(--hg-border);
+  --el-border-color-darker: var(--hg-border);
+}
+
+/* 表格：统一深色，去斑驳 */
+html.dark .el-table {
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: var(--hg-bg-soft);
+  --el-table-row-hover-bg-color: rgba(47, 125, 255, 0.08);
+  --el-table-border-color: var(--hg-border);
+  --el-table-header-text-color: var(--hg-text);
+  --el-table-text-color: var(--hg-text-2);
+  background: transparent;
+}
+html.dark .el-table th.el-table__cell {
+  font-weight: 600;
+}
+
+/* 分页统一配色 */
+html.dark .el-pagination.is-background .el-pager li {
+  background: var(--hg-bg-soft);
+  color: var(--hg-text-2);
+}
+html.dark .el-pagination.is-background .el-pager li.is-active {
+  background: var(--hg-primary);
+  color: #fff;
+}
+
+/* 弹窗/消息框背景统一 */
+html.dark .el-message-box,
+html.dark .el-dialog,
+html.dark .el-drawer {
+  background: var(--hg-panel);
+  border: 1px solid var(--hg-border);
+}

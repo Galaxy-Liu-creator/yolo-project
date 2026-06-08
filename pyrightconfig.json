@@ -1,0 +1,11 @@
+{
+  "include": ["backend-python"],
+  "extraPaths": [
+    "backend-python",
+    "D:/Miniconda3_python/Lib/site-packages"
+  ],
+  "reportMissingImports": "warning",
+  "reportMissingModuleSource": "none",
+  "reportUnusedParameter": "none",
+  "pythonVersion": "3.13"
+}
