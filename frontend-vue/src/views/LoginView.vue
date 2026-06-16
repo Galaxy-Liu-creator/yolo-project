@@ -10,7 +10,7 @@
     <!-- 顶部品牌条 -->
     <header class="brand-bar">
       <div class="brand-mark">
-        <el-icon :size="20"><Cpu /></el-icon>
+        <img src="/logo-512.png" alt="吊装卫士" class="brand-logo" />
       </div>
       <div class="brand-meta">
         <span class="brand-text">{{ SYSTEM_SHORT }}</span>
@@ -183,9 +183,22 @@ async function handleLogin() {
   height: 40px;
   display: grid;
   place-items: center;
-  color: #061018;
-  background: linear-gradient(135deg, var(--hg-primary), var(--hg-primary-2));
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+  padding: 6px;
+  background: linear-gradient(135deg, rgba(47, 125, 255, 0.15), rgba(34, 211, 238, 0.08));
+  border: 1px solid rgba(90, 140, 210, 0.35);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+.brand-mark:hover {
+  background: linear-gradient(135deg, rgba(47, 125, 255, 0.25), rgba(34, 211, 238, 0.15));
+  border-color: var(--hg-primary-2);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+}
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(34, 211, 238, 0.4));
 }
 .brand-meta {
   display: flex;

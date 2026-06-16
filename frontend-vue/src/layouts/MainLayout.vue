@@ -4,7 +4,7 @@
     <el-aside :width="collapsed ? '64px' : '232px'" class="sidebar">
       <div class="logo" :class="{ collapsed }">
         <div class="logo-mark">
-          <el-icon :size="20"><Aim /></el-icon>
+          <img src="/logo-512.png" alt="吊装卫士" class="logo-img" />
         </div>
         <span v-show="!collapsed" class="logo-text">吊装卫士</span>
       </div>
@@ -237,10 +237,23 @@ async function onCommand(cmd) {
   height: 34px;
   display: grid;
   place-items: center;
-  color: #061018;
-  background: linear-gradient(135deg, var(--hg-primary), var(--hg-primary-2));
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+  padding: 5px;
+  background: linear-gradient(135deg, rgba(47, 125, 255, 0.18), rgba(34, 211, 238, 0.1));
+  border: 1px solid rgba(90, 140, 210, 0.3);
+  backdrop-filter: blur(6px);
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.logo-mark:hover {
+  background: linear-gradient(135deg, rgba(47, 125, 255, 0.28), rgba(34, 211, 238, 0.18));
+  border-color: var(--hg-primary-2);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.25);
+}
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(34, 211, 238, 0.35));
 }
 .logo-text {
   font-size: 18px;
