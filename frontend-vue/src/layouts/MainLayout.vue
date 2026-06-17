@@ -4,9 +4,9 @@
     <el-aside :width="collapsed ? '64px' : '232px'" class="sidebar">
       <div class="logo" :class="{ collapsed }">
         <div class="logo-mark">
-          <img src="/logo-512.png" alt="吊装卫士" class="logo-img" />
+          <img src="/logo-512.png" alt="擎安智吊" class="logo-img" />
         </div>
-        <span v-show="!collapsed" class="logo-text">吊装卫士</span>
+        <span v-show="!collapsed" class="logo-text">擎安智吊</span>
       </div>
 
       <el-menu

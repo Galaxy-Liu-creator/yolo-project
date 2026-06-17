@@ -10,11 +10,11 @@
     <!-- 顶部品牌条 -->
     <header class="brand-bar">
       <div class="brand-mark">
-        <img src="/logo-512.png" alt="吊装卫士" class="brand-logo" />
+        <img src="/logo-512.png" alt="擎安智吊" class="brand-logo" />
       </div>
       <div class="brand-meta">
         <span class="brand-text">{{ SYSTEM_SHORT }}</span>
-        <span class="brand-sub">HOISTGUARD · SAFETY VISION</span>
+        <span class="brand-sub">AEGISLIFT · SAFETY VISION</span>
       </div>
     </header>
 

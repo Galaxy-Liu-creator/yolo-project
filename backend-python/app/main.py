@@ -12,7 +12,7 @@ from app.core.response import BizError, fail, ok
 
 app = FastAPI(
     title="油田吊装作业安全视频智能分析系统 API",
-    description="HoistGuard 演示后端：FastAPI + 死数据 + JWT。统一响应 {code,message,data}。",
+    description="AegisLift 演示后端：FastAPI + 死数据 + JWT。统一响应 {code,message,data}。",
     version="1.0.0",
 )
 

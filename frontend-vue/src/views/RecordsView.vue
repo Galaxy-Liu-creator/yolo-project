@@ -242,7 +242,7 @@ const DEFAULT_FILTERS = {
   keyword: '',
 }
 
-const RECORDS_VIEW_STORAGE_KEY = 'hoistguard.recordsViewState'
+const RECORDS_VIEW_STORAGE_KEY = 'aegislift.recordsViewState'
 
 const recordsViewCache = {
   initialized: false,

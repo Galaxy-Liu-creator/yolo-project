@@ -1,4 +1,4 @@
-# HoistGuard 后端（油田吊装作业安全视频智能分析系统 · 演示后端）
+# AegisLift 后端（油田吊装作业安全视频智能分析系统 · 演示后端）
 
 FastAPI + 死数据（无数据库，内存/静态数据）+ JWT 鉴权。AI 识别结果全部为预置静态数据。
 本服务严格按 `../API-CONTRACT.md` 实现，统一响应结构 `{code, message, data}`。

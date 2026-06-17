@@ -18,8 +18,8 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    APP_NAME: str = "HoistGuard"
-    SECRET_KEY: str = "hoistguard-demo-secret-key-change-me-2026"
+    APP_NAME: str = "AegisLift"
+    SECRET_KEY: str = "aegislift-demo-secret-key-change-me-2026"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_SECONDS: int = 86400
 

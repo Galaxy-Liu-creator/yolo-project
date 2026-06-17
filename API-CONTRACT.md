@@ -1,4 +1,4 @@
-# HoistGuard 油田吊装作业安全视频智能分析系统 — API 契约 (v1)
+# AegisLift 油田吊装作业安全视频智能分析系统 — API 契约 (v1)
 
 > 本文件是前后端对齐的**唯一事实来源**。后端按此实现，前端按此消费。任何一方需要变更，必须先改本文件。
 > 后端：FastAPI + 死数据（无数据库，内存/JSON 静态数据）。鉴权：JWT。AI 识别：预置静态结果。
@@ -310,7 +310,7 @@
   "displayName": "系统管理员",
   "role": "admin",
   "avatar": null,
-  "email": "admin@hoistguard.cn",
+  "email": "admin@aegislift.cn",
   "phone": "13800000001",
   "dept": "安全监督部"
 }

@@ -1,6 +1,6 @@
 // 系统统一文案 / 常量
 export const SYSTEM_NAME = '油田吊装作业安全视频智能分析系统'
-export const SYSTEM_SHORT = '吊装卫士 · HoistGuard'
+export const SYSTEM_SHORT = '擎安智吊 · AegisLift'
 export const COPYRIGHT = '© 2026 油田吊装作业安全视频智能分析系统 · V2025.01'
 
 // 后端基础地址（用于拼接 /static 图片）。开发态走 vite 代理，留空即可走同源代理。
