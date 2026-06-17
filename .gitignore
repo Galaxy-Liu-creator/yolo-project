@@ -34,6 +34,11 @@ pnpm-debug.log*
 picture/
 dataset/preview_boxes/
 output/
+screenshots/
+
+# 文档制作工具脚本（依赖被忽略的 docs/ 与 output/，仅本地使用，不纳入版本控制）
+build_latex.py
+cover_rebrand.py
 
 # OS files
 .DS_Store
