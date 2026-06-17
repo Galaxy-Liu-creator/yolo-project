@@ -1,0 +1,16 @@
+# AegisLift（擎安智吊）PPE / 着装规范检测数据集定义示例（Ultralytics YOLO 格式）
+# 用作 train.py / evaluate_fpfn.py 的 --dataset-yaml / --data 入参模板。
+# 实际数据请放到 path 指向的目录；此处路径为占位。
+
+path: ../datasets/ppe      # 数据集根目录（可相对本文件或写绝对路径）
+train: images/train        # 训练集图片目录（相对 path）
+val: images/val            # 验证集图片目录（相对 path）
+test: images/test          # 测试集图片目录（可选）
+
+# 类别定义须与 config.py 中的 CLASS_NAMES 保持一致
+names:
+  0: helmet      # 安全帽
+  1: no-helmet   # 未佩戴安全帽
+  2: no-vest     # 未穿反光衣
+  3: person      # 人员
+  4: vest        # 反光衣

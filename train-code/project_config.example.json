@@ -1,0 +1,50 @@
+{
+  "_comment": "AegisLift（擎安智吊）训练流水线项目化配置示例。复制为 project_config.json 后按实际环境修改；所有路径均为占位，请改成本机真实数据位置。config.py 会读取本文件覆盖代码内置默认值。",
+
+  "artifacts": {
+    "root": "artifacts"
+  },
+
+  "data": {
+    "image_roots": ["datasets/raw/images"],
+    "label_root": "datasets/raw/labels",
+    "image_extensions": [".jpg", ".jpeg", ".png"],
+    "class_names": {
+      "0": "helmet",
+      "1": "no-helmet",
+      "2": "no-vest",
+      "3": "person",
+      "4": "vest"
+    },
+    "split_ratios": { "train": 0.70, "val": 0.15, "test": 0.15 },
+    "default_split_strategy": "sequence_contiguous"
+  },
+
+  "prepare": {
+    "default_mode": "fullframe",
+    "include_empty_person_crops": false,
+    "monitored_person_labels": ["person"],
+    "person_conf": 0.20,
+    "person_imgsz": 640,
+    "assignment_min_ioa": 0.35,
+    "fallback_to_fullframe": true
+  },
+
+  "models": {
+    "allow_remote_model_download": false,
+    "person_model_candidates": ["weights/person_detect_yolov8.pt"],
+    "python_candidates": []
+  },
+
+  "training": {
+    "default_train_args": {
+      "imgsz": 640,
+      "epochs": 180,
+      "batch": 4,
+      "patience": 40,
+      "workers": 0,
+      "device": "cpu",
+      "seed": 42
+    }
+  }
+}

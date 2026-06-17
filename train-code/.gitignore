@@ -1,0 +1,15 @@
+# 训练产物与本地配置（不纳入版本控制）
+__pycache__/
+*.py[cod]
+
+# 运行期生成物
+artifacts/
+runs/
+datasets/
+weights/
+*.pt
+*.onnx
+
+# 真实项目配置（保留 *.example.json 作为模板）
+project_config.json
+data.yaml
